@@ -1,0 +1,13 @@
+.DS_Store
+
+build
+node_modules
+server/.env
+server/env/.env.development
+server/env/.env.staging
+server/env/.development.env
+server/env/.staging.env
+server/uploads
+server/public
+client_react/node_modules
+.vscode

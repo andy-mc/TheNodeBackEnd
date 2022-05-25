@@ -1,0 +1,16 @@
+{
+  "env": {
+    "node":  true,
+    "es6": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 13
+  },
+  "rules": {
+    "strict": ["error", "global"],
+    "quotes": ["error", "double", { "avoidEscape": true } ],
+    "semi": [2, "always"],
+    "no-async-promise-executor": "off"
+  }
+}
