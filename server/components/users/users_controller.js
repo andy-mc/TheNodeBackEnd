@@ -1,5 +1,3 @@
-"use strict";
-
 const store = require("./users_store");
 
 async function add_users(user) {
@@ -7,7 +5,7 @@ async function add_users(user) {
     throw new Error("[add_users]: user incomplete data 🙄");
   }
   const user_to_add = {
-    name: user.name
+    name: user.name,
   };
   const new_user = await store.add(user_to_add);
   return new_user;

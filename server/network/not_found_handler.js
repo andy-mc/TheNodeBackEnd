@@ -1,5 +1,3 @@
-"use strict";
-
 const response = require("./response");
 
 const not_found_handler = (req, res) => {

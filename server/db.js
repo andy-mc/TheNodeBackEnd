@@ -1,6 +1,5 @@
-"use strict";
-
 const db = require("mongoose");
+
 db.Promise = global.Promise;
 
 const db_options = {

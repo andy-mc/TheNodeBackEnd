@@ -1,5 +1,3 @@
-"use strict";
-
 function load_app_routes(app) {
   app.use("/user", require("../components/users/users_routes"));
   app.use("/message", require("../components/messages/messages_routes"));

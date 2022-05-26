@@ -1,15 +1,14 @@
-"use strict";
-
 const router = require("express").Router();
 const controller = require("./users_controller");
 const response = require("../../network/response");
+
 const sub_route = "/";
 
 router.get(sub_route, async (req, res) => {
   try {
     const users = await controller.list_users();
     response.success(req, res, users, 200);
-  } catch (error) { 
+  } catch (error) {
     response.error(req, res, "Unexpected Error", 500, error.stack);
   }
 });

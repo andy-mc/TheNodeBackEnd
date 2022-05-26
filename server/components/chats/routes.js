@@ -1,8 +1,7 @@
-"use strict";
-
 const router = require("express").Router();
 const controller = require("./controller");
 const response = require("../../network/response");
+
 const sub_route = "/";
 
 router.get(sub_route, async (req, res) => {
@@ -14,7 +13,7 @@ router.get(sub_route, async (req, res) => {
   }
 });
 
-router.get(sub_route + ":userId", async (req, res) => {
+router.get(`${sub_route}:userId`, async (req, res) => {
   const query = {
     users: req.params.userId,
   };

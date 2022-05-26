@@ -1,40 +1,35 @@
-"use strict";
-
 const statusMessages = {
-  "200": "OK",
-  "201": "Created",
-  "400": "Bad Request",
-  "404": "Not Found",
-  "500": "Internal Server Error"
+  200: "OK",
+  201: "Created",
+  400: "Bad Request",
+  404: "Not Found",
+  500: "Internal Server Error",
 };
 
-const success = (req, res, body, status=200) => { 
-  res.status(status)
-  .send({
+const success = (req, res, body, status = 200) => {
+  res.status(status).send({
     error: null,
-    body: body || statusMessages[status]
+    body: body || statusMessages[status],
   });
 };
 
-const error = (req, res, error, status=500, error_details) => { 
+const error = (req, res, error, status = 500, error_details) => {
   console.error("[LOG_ERROR_DETAILS]:", error_details);
 
-  res.status(status)
-  .send({
+  res.status(status).send({
     error: error || statusMessages[status],
-    data: null
+    data: null,
   });
 };
 
-const html = (req, res, html, status=200) => { 
-  res.status(status)
-  .send(html);
+const html = (req, res, html, status = 200) => {
+  res.status(status).send(html);
 };
 
 module.exports = {
   success,
   error,
-  html
+  html,
 };
 
 // idea to format the response

@@ -1,11 +1,10 @@
-"use strict";
-
 const {
   get_search_query,
-  plugins: {Only_Model_Props}
+  plugins: { Only_Model_Props },
 } = require("../../store/utils");
 
 const Model = require("./model");
+
 const only_model_props = Only_Model_Props(Model);
 
 function add_chat(chat) {

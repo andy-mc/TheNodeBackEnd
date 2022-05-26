@@ -1,7 +1,5 @@
-"use strict";
-
 function get_search_query(query, [...plugins]) {
-  for (let [property, value] of Object.entries(query)) {
+  for (const [property, value] of Object.entries(query)) {
     for (const plugin of plugins) {
       const next = plugin(property, value, query);
       if (!next) return false;
@@ -17,7 +15,7 @@ function Only_Model_Props(Model) {
       return false;
     }
     return true;
-  }; 
+  };
 }
 
 function String_To_Regex(Model) {
@@ -33,10 +31,10 @@ function String_To_Regex(Model) {
 
 module.exports = {
   get_search_query,
-  plugins : {
+  plugins: {
     Only_Model_Props,
-    String_To_Regex
-  }
+    String_To_Regex,
+  },
 };
 
 function getModelProps(Model, filter_type) {

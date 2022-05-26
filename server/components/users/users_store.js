@@ -1,5 +1,3 @@
-"use strict";
-
 const users_model = require("./users_model");
 
 async function add_users(user) {

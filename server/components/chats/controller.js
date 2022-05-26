@@ -1,6 +1,8 @@
-"use strict";
-
 const store = require("./store");
+
+function valid_chat_users(users) {
+  return Array.isArray(users) && users.length;
+}
 
 async function addChat(chat) {
   if (!valid_chat_users(chat.users)) {
@@ -9,7 +11,7 @@ async function addChat(chat) {
   return store.add(chat);
 }
 
-function listChats(query={}) {
+function listChats(query = {}) {
   if (!Object.keys(query).length === 0 && !query.users) {
     throw new Error(`Chat query: ${query} incorrect`);
   }
@@ -20,7 +22,3 @@ module.exports = {
   addChat,
   listChats,
 };
-
-function valid_chat_users(users) {
-  return Array.isArray(users) && users.length;
-}

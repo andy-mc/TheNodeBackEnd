@@ -1,10 +1,9 @@
-"use strict";
-
 const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+
+const { Schema } = mongoose;
 
 const UsersSchema = new Schema({
-  name: {type: String, required: true},
+  name: { type: String, required: true },
 });
 
 const model = mongoose.model("users", UsersSchema);
