@@ -27,6 +27,8 @@
     "socket.io": "^4.5.1"
   },
   "devDependencies": {
-    "eslint": "^8.15.0"
+    "eslint": "^8.15.0",
+    "jest": "^28.1.0",
+    "supertest": "^6.2.3"
   }
 }

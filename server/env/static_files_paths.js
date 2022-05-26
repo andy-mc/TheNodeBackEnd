@@ -2,6 +2,10 @@ const path = require("path");
 
 function get_static_files_paths(environment) {
   const files_paths = {
+    test: {
+      public_dir: path.join(__dirname, "../public/"),
+      files_route: "files/",
+    },
     development: {
       public_dir: path.join(__dirname, "../public/"),
       files_route: "files/",
